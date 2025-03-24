@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class UserDemo {
+public class UserManagement {
   private static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class UserDemo {
         String menu = scanner.nextLine();
         ;
         if (menu.equals("1")) {
-//        UserLogIn;
+          UserLogIn.UserLogIn();
           run = false;
 
         } else if (menu.equals("2")) {
