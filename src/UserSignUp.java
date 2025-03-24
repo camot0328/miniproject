@@ -3,11 +3,10 @@ import java.util.Scanner;
 
 public class UserSignUp {
   public static User newUser = new User("", "", "");
-  private static Scanner scanner = new Scanner(System.in);
-  public static HashMap<String, User> userDatabase = UserSignUpList.getUserDatabase();
 
   public static void signUp() {
-    System.out.println("\n=== 회원가입 시스템 ===");
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("\n---------------- 회원가입 시스템 ----------------");
 
     // ID 입력 및 검증
     while (true) {
@@ -19,7 +18,7 @@ public class UserSignUp {
         continue;
       }
 
-      if (userDatabase.containsKey(newUser.userId)) {
+      if (UserManagement.userDatabase.containsKey(newUser.userId)) {
         System.out.println("⚠️ 이미 존재하는 ID입니다. 다른 ID를 입력하세요.");
       } else {
         break;
@@ -56,11 +55,11 @@ public class UserSignUp {
     }
 
     // 새로운 회원 정보를 데이터베이스에 저장
-    userDatabase.put(newUser.userId, newUser);
+    UserManagement.userDatabase.put(newUser.userId, newUser);
 
     System.out.println("\n✅ 회원가입 완료!");
     System.out.println(newUser);
-    System.out.println("======================\n");
+    System.out.println();
   }
 
   // 입력값이 유효한지 검사하는 메서드 (영소문자 + 숫자 조합 & 4~12자)
@@ -70,6 +69,6 @@ public class UserSignUp {
 
   // 닉네임 중복 검사
   private static boolean isNicknameDuplicate(String nickname) {
-    return userDatabase.values().stream().anyMatch(user -> user.nickname.equals(nickname));
+    return UserManagement.userDatabase.values().stream().anyMatch(user -> user.nickname.equals(nickname));
   }
 }

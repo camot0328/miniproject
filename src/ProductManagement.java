@@ -5,7 +5,7 @@ public class ProductManagement {
 
   static Map<String, Product> productManagement = new HashMap<>();
 
-  public static void main(String[] args) {
+  public static void productManagementMenu() {
     Scanner in = new Scanner(System.in);
     Product product = null;
     String productNum = "";
