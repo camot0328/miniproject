@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-public class UserSighUpList {
+public class UserSignUpList {
   private static HashMap<String, User> userDatabase = new HashMap<>();
 
   static {  // 직접 userDatabase 사용하여 초기 데이터 추가

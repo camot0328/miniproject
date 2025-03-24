@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class UserSignUp {
   public static User newUser = new User("", "", "");
   private static Scanner scanner = new Scanner(System.in);
-  public static HashMap<String, User> userDatabase = UserSighUpList.getUserDatabase();
+  public static HashMap<String, User> userDatabase = UserSignUpList.getUserDatabase();
 
   public static void signUp() {
     System.out.println("\n=== 회원가입 시스템 ===");
