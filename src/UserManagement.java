@@ -8,7 +8,7 @@ public class UserManagement {
 
   static {
     userDatabase.put("user1", new User("user1", "1234", "박보경"));
-    userDatabase.put("master", new User("master", "1234zxcv", "정대현", UserType.운영자));
+    userDatabase.put("master", new User("master", "9876", "정대현", UserType.운영자));
     userDatabase.put("user2", new User("user2", "0000", "최상근"));
   }
 

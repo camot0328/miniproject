@@ -4,8 +4,7 @@ public class Product {
   String productNo;
   String information;
   int quantity;
-  String productAdd;
-  String productUpdate;
+
 
   public Product(String productName, int price, String information, String productNo, int quantity) {
     this.productName = productName;
@@ -13,7 +12,5 @@ public class Product {
     this.information = information;
     this.productNo = productNo;
     this.quantity = quantity;
-//    this.productAdd = productAdd;
-//    this.productUpdate = productUpdate;
   }
 }
